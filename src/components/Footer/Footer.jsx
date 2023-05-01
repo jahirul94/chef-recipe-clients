@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="bg-dark text-white pt-4">
       <Container>
         <Row>
           <Col md={4}>
@@ -34,10 +34,6 @@ const Footer = () => {
             </form>
           </Col>
         </Row>
-        <hr />
-        <p className="text-center">
-          &copy; {new Date().getFullYear()} Company Name. All rights reserved.
-        </p>
       </Container>
     </footer>
   );
