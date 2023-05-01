@@ -1,20 +1,22 @@
 import React from "react";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { FaArrowRight, FaHeart } from 'react-icons/fa';
+import { Link } from "react-router-dom";
 
 const Cart = ({ chef }) => {
   console.log(chef);
   return (
-    <Card className="w-50">
-      <Card.Img variant="top" src={chef.picture} />
+    <Card>
+      <Card.Img className="p-2" variant="top" src={chef.picture} />
       <Card.Body>
-        <Card.Title>{chef.name}</Card.Title>
-         <div>
-              <h5>Years of experience : {chef.experience} </h5>
-              <h5>Numbers of recipes : {chef.recipes} </h5>
-              <h5>Likes : {chef.likes} </h5>
+        <Card.Title className="fs-2 fw-bold">{chef.name}</Card.Title>
+         <div className="mt-4 ps-2 pb-4">
+              <p className="fw-semibold m-0">Years of experience : {chef.experience} </p>
+              <p className="fw-semibold m-0">Numbers of recipes : {chef.recipes} </p>
+              <p className="fw-semibold m-0"><FaHeart></FaHeart> Likes : {chef.likes} </p>
          </div>
-        <Button variant="primary">Go somewhere</Button>
+         <Link to={`/${chef.id}`}><Button className="w-100" variant="secondary">View Recipes<FaArrowRight className="ms-4"></FaArrowRight></Button></Link>
       </Card.Body>
     </Card>
   );
