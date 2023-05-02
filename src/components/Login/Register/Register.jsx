@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 
 
 const Register = () => {
-    const [ error , setError ] = useState(null);
+    const [ error , setError ] = useState('');
     const { createUser} = useContext(AuthContext)
 
     const handleRegister = event =>{
@@ -25,13 +25,14 @@ const Register = () => {
              setError('Please Enter 6 digit or larger Password')
              return
         }
-
+        setError('');
         createUser( email , password )
         .then(result =>{
              console.log(result.user);
+             form.reset();
         })
         .catch(error =>{
-            console.log(error.message);
+           setError(error.message);
         })
     }
 
@@ -60,7 +61,7 @@ const Register = () => {
          <Form.Control type="password" name="password" placeholder="Password" required />
          </Form.Group>
 
-         <Form.Group className="mb-3" controlId="formBasicPassword">
+         <Form.Group className="mb-3" controlId="formBasicConfirm">
          <Form.Label className='fw-bold'>Confirm Password</Form.Label>
          <Form.Control type="password" name="confirm" placeholder="Confirm Password" required />
          </Form.Group>
@@ -70,7 +71,7 @@ const Register = () => {
           Register
          </Button>
      </Form>
-     <div className="mt-2">
+     <div style={{marginBottom:'100px'}} className="mt-2">
          Already Have An Account ? <Link to='/login' className="text-primary text-decoration-none"> Login </Link>
      </div>
 </Container> 
