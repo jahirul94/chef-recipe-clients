@@ -11,6 +11,7 @@ import Home from './components/Home/Home';
 import Login from './components/Login/Login/Login';
 import Register from './components/Login/Register/Register';
 import AuthProvider from './AuthProvider/AuthProvider';
+import RecipesDetails from './components/RecipesDetails/RecipesDetails';
 
 
 const router = createBrowserRouter([
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
       {
         path : '/register',
         element : <Register></Register>
+      },
+      {
+        path : ':id',
+        element : <RecipesDetails></RecipesDetails>,
+        loader : ({params}) => fetch(`http://localhost:5000/${params.id}`)
       }
     ]
   },

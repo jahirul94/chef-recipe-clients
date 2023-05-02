@@ -5,7 +5,6 @@ import { FaArrowRight, FaHeart } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 
 const Cart = ({ chef }) => {
-  console.log(chef);
   return (
     <Card>
       <Card.Img className="p-2" variant="top" src={chef.picture} />
