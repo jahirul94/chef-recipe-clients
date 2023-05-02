@@ -17,7 +17,7 @@ const Home = () => {
                         <p className='fs-5 fw-semibold'>You will also get a chance to win awesome prizes, make new friends and share delicious recipes.</p>
                 </Card.ImgOverlay>
             </Card>
-            <div style={{display:'grid' , gridTemplateColumns :'1fr 1fr 1fr' , gap: '10px'}}>
+            <div className='my-4' style={{display:'grid' , gridTemplateColumns :'1fr 1fr 1fr' , gap: '20px'}}>
                {
                 data.map(sd => <Cart key={sd.id} chef = {sd}></Cart>)
                }

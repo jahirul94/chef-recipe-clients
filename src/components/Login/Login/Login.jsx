@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 
 const Login = () => {
   const { login } = useContext(AuthContext);
@@ -43,6 +44,10 @@ const Login = () => {
         </Form>
    <div className="mt-2">
        Don't Have An Account ? <Link to='/register' className="text-danger text-decoration-none"> Register </Link>
+   </div>
+   <div className="d-flex" style={{marginTop :'30px' , marginBottom : '100px'}}>
+         <button type="button" class="btn btn-outline-secondary me-2 d-flex align-items-center">Connect with <FaGoogle className="ms-2"></FaGoogle></button>
+         <button type="button" class="btn btn-outline-secondary d-flex align-items-center">Connect With <FaGithub className="ms-2"></FaGithub></button>
    </div>
 </Container>
   );
