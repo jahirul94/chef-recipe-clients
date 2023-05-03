@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import Cart from './Cart';
 import Container from 'react-bootstrap/Container';
 import { Card } from 'react-bootstrap';
+import LazyLoad from 'react-lazy-load';
 
 
 const Home = () => {
@@ -10,7 +11,9 @@ const Home = () => {
     return (
         <Container>
             <Card style={{marginBottom :'50px' , marginTop : '20px'}}>
+            <LazyLoad>
                 <Card.Img variant="top" src="https://img.freepik.com/free-photo/burger_1339-1577.jpg?w=740&t=st=1683040823~exp=1683041423~hmac=05dcff08edf15edd6d192aeec6f93f516f4d17d3a71cec72a8aa6a06f17bd2a9" />
+            </LazyLoad>
                 <Card.ImgOverlay className='ms-4 d-flex text-black'>
                        <div className='w-50'>
                            <h2 className='text-large'>Welcome to American Chef's Recipes!</h2>
