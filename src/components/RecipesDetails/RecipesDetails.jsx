@@ -6,7 +6,7 @@ import { Container } from 'react-bootstrap';
 const RecipesDetails = () => {
     const detailsData = useLoaderData();
     return (
-        <Container className='my-4' style={{display : 'grid' , gridTemplateColumns: '1fr 1fr 1fr', gap:'20px' }}>
+        <Container className='my-4 grid'>
              {
                 detailsData.map( sd => <RecipesDetailsCard key={sd.id} data ={sd}></RecipesDetailsCard>)
              } 

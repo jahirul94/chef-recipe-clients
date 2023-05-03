@@ -10,3 +10,39 @@
     color:white;
 
 }
+
+.grid{
+    display: grid;
+    grid-template-columns:repeat(3 , 1fr);
+    gap: 20px;
+}
+
+.text-large{
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 30px;
+    padding-top: 200px;
+}
+
+.text-small{
+    font-weight: 600;
+    font-size: 17px;  
+}
+
+@media only screen and (max-width: 768px) {
+       .grid{
+         display: flex;
+         flex-direction: column;
+       }
+       .text-large{
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 5px;
+        padding-top: 5px;
+    }
+    .text-small{
+        font-weight: 600;
+        font-size: 12px;
+    }
+      
+}

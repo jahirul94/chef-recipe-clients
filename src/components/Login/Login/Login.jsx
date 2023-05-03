@@ -3,6 +3,7 @@ import { Button, Container, Form } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import { FaGithub, FaGoogle } from "react-icons/fa";
+import './Login.css'
 
 const Login = () => {
   const { login , loginWithGithub , loginWithGoogle } = useContext(AuthContext);
@@ -55,7 +56,7 @@ const Login = () => {
   }
 
   return (
-    <Container className="mx-auto w-25 mt-4">
+    <Container className="mx-auto width">
          <h4 className="mb-4 fw-bold">Please Login</h4>
         <Form onSubmit={handleLogin}>
           <Form.Group className="mb-3" controlId="formBasicEmail">

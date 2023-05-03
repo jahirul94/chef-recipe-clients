@@ -52,7 +52,7 @@ const Register = () => {
 
 
   return (
-    <Container className="mx-auto w-25 mt-4 mb-4">
+    <Container className="mx-auto width">
        <h4 className="mb-4 fw-bold">Register your account</h4>
      <Form onSubmit={handleRegister}>
          <Form.Group className="mb-3" controlId="formBasicName">
