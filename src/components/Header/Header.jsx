@@ -1,10 +1,13 @@
 import React, { useContext } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import './Header.css'
 
 const Header = () => {
   const { logOut , user } = useContext(AuthContext);
+  const location = useLocation();
+  
   const handleLogOut = () =>{
       logOut()
       .then()
@@ -13,17 +16,18 @@ const Header = () => {
       })
   }
   console.log(user?.displayName);
+
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar className="mx-2" collapseOnSelect expand="lg" bg="secondary" variant="dark">
       <Container>
         <Navbar.Brand>American Chef's Recipes </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto">
-              <Link className="me-4 text-decoration-none text-white" to='/'>Home</Link>
-              <Link className="me-4 text-decoration-none text-white" to='/blog'>Blog</Link>
-              { user ? <Link className="me-4 text-decoration-none text-white" onClick={handleLogOut}>Log Out</Link> :
-              <Link className="me-4 text-decoration-none text-white" to='/login'>Login</Link>}
+          <Nav className="ms-auto mt-2">
+              <Link className={location.pathname == '/' ? "activeLink" : 'inActiveLink' } to='/'>Home</Link>
+              <Link className={location.pathname == '/blog' ? "activeLink" : 'inActiveLink' } to='/blog'>Blog</Link>
+              { user ? <Link className="inActiveLink" onClick={handleLogOut}>Log Out</Link> :
+              <Link className={location.pathname == '/login' ? "activeLink" : 'inActiveLink' } to='/login'>Login</Link>}
                {
                 user && <img style={{width:'40px' , height : '40px' , borderRadius :'50%'}} src={user.photoURL}></img>
                }

@@ -2,11 +2,12 @@ import React, { useContext, useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
+import { updateProfile } from "firebase/auth";
 
 
 const Register = () => {
     const [ error , setError ] = useState('');
-    const { createUser} = useContext(AuthContext)
+    const { createUser } = useContext(AuthContext)
 
     const handleRegister = event =>{
         event.preventDefault();
@@ -16,6 +17,7 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         const confirm = form.confirm.value;
+        // validation 
         setError('')
         if( password !== confirm ) {
              setError("Password Don't Match")
@@ -25,15 +27,27 @@ const Register = () => {
              setError('Please Enter 6 digit or larger Password')
              return
         }
+        // create User 
         setError('');
         createUser( email , password )
         .then(result =>{
-             console.log(result.user);
+             const user = result.user ;
              form.reset();
+             updateData(user , name , photo)
         })
         .catch(error =>{
            setError(error.message);
         })
+       
+    // update user data 
+    const updateData = ( user , name , photo) =>{
+          updateProfile(user , {
+              displayName: name , photoURL: photo
+          }).then(()=>{}).catch(err=>setError(err.message))
+     }
+
+
+
     }
 
 

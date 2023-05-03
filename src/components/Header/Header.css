@@ -1,0 +1,12 @@
+.activeLink{
+     margin-right: 30px;
+     text-decoration: underline;
+     color:white;
+}
+ 
+.inActiveLink{
+    margin-right: 30px;
+    text-decoration: none;
+    color:white;
+
+}

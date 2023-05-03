@@ -21,9 +21,16 @@ const Home = () => {
                 </Card.ImgOverlay>
             </Card>
             
-             <div style={{marginTop:'150px' , marginBottom: '50px' , textAlign: 'center'}}>
-                 <h2 className='fw-bold'>Explore Our awesome Chefs and Their Recipes!</h2>
-             </div>
+             <section >
+                 <Card style={{paddingTop:'50px' ,paddingBottom: '50px' , textAlign: 'center'}}>
+                    <Card.Body>
+                        <Card.Title className='fw-bold fs-2 mb-4'>Explore Our awesome Chefs and Their Recipes!</Card.Title>
+                        <Card.Text className='fw-semibold'>
+                            Explore Our Awesome Chefs and Their Recipes is a website dedicated to showcasing talented chefs and their unique recipes. Our platform provides food lovers with an opportunity to discover and learn from some of the most innovative and creative culinary experts from around the world. Whether you're an aspiring chef or just a food enthusiast, our website is the perfect place to explore new cuisines and expand your culinary knowledge. Join us on a journey of gastronomic delight and discover the delicious world of food through our exceptional chefs and their mouth-watering recipes.
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+             </section>
 
 
             <div className='my-4' style={{display:'grid' , gridTemplateColumns :'1fr 1fr 1fr' , gap: '20px'}}>
