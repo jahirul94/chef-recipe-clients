@@ -8,7 +8,7 @@ import LazyLoad from "react-lazy-load";
 
 
 const RecipesDetailsCard = ({ data }) => {
-  const { name, recipe, picture , rating } = data;
+  const { name, ingredients, picture , rating , cooking_method } = data;
   const [ Favorite , setFavorite ] = useState(false);
 
   const handleTost = () =>{
@@ -17,13 +17,14 @@ const RecipesDetailsCard = ({ data }) => {
   }
 
   return (
-      <div className="p-2" style={{border : '1px solid gray' , height:'600px'}}>
+      <div className="p-2" style={{border : '1px solid gray' , height:'100%'}}>
          <LazyLoad>
-              <img style={{height : '350px' , width : '100%'}} className="img-fluid" src={picture} alt="" />
+              <img style={{height : '300px' , width : '100%'}} className="img-fluid mb-2" src={picture} alt="" />
          </LazyLoad>
              <h2>{name}</h2>
              <div>
-                   <span className="fs-5 fw-semibold">Recipe : </span>{recipe}<br/>
+                   <span className="fs-5 fw-semibold">Ingredients : </span>{ingredients}<br/>
+                   <p className="mt-2"><span className="fs-5 fw-semibold">Cooking method :</span> <small>{cooking_method}</small></p>
                    <div className="py-4 ps-2">
                         <div className="d-flex justify-content-between">
                             <div>

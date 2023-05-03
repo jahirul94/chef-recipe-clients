@@ -15,7 +15,7 @@ const Header = () => {
         console.log(error.message);
       })
   }
-  console.log(user?.displayName);
+  // console.log(user?.displayName);
 
   return (
     <Navbar className="mx-2" collapseOnSelect expand="lg" bg="secondary" variant="dark">

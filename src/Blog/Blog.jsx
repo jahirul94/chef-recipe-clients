@@ -2,7 +2,6 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import { FaArrowDown } from 'react-icons/fa';
 
-
 const Blog = () => {
 
     return (
@@ -30,9 +29,9 @@ const Blog = () => {
                     </div>
              </div>
 
-             <div className='my-4 d-flex justify-content-center'>
-                        <button className='btn btn-warning fw-semibold d-flex align-items-center'>Download page PDF<FaArrowDown className='ms-2'></FaArrowDown></button>
-              </div>
+             <div className='my-4 d-flex justify-content-center'>                              <button className='btn btn-warning fw-semibold d-flex  align-items-center'>Download page PDF<FaArrowDown className='ms-2'></FaArrowDown></button> 
+
+            </div>
         </Container>
     );
 };
