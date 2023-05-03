@@ -13,6 +13,8 @@ import Register from './components/Login/Register/Register';
 import AuthProvider from './AuthProvider/AuthProvider';
 import RecipesDetails from './components/RecipesDetails/RecipesDetails';
 import PrivateRoutes from './routes/PrivateRoutes';
+import ErrorPage from './errorPage/ErrorPage';
+import Blog from './Blog/Blog';
 
 
 const router = createBrowserRouter([
@@ -37,9 +39,19 @@ const router = createBrowserRouter([
         path : ':id',
         element : <PrivateRoutes><RecipesDetails></RecipesDetails></PrivateRoutes>,
         loader : ({params}) => fetch(`http://localhost:5000/${params.id}`)
+      },
+       {
+        path :'blog',
+        element :<Blog></Blog>
+
+       },
+      {
+        path :'*',
+        element :<ErrorPage></ErrorPage>
       }
+    
     ]
-  },
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

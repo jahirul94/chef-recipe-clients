@@ -12,7 +12,7 @@ const Header = () => {
         console.log(error.message);
       })
   }
-
+  console.log(user?.displayName);
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -24,6 +24,9 @@ const Header = () => {
               <Link className="me-4 text-decoration-none text-white" to='/blog'>Blog</Link>
               { user ? <Link className="me-4 text-decoration-none text-white" onClick={handleLogOut}>Log Out</Link> :
               <Link className="me-4 text-decoration-none text-white" to='/login'>Login</Link>}
+               {
+                user && <img style={{width:'40px' , height : '40px' , borderRadius :'50%'}} src={user.photoURL}></img>
+               }
               {/* <Link className="me-4 text-decoration-none text-white" to='/register'>Register</Link> */}
           </Nav>
         </Navbar.Collapse>

@@ -10,13 +10,22 @@ const Home = () => {
     return (
         <Container>
             <Card style={{marginBottom :'50px' , marginTop : '20px'}}>
-                <Card.Img variant="top" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" />
-                <Card.ImgOverlay className='ms-4 text-info' style={{marginTop:'200px'}}>
-                        <h2 className='fs-1 fw-bold'>Welcome to American Chef's Recipes!</h2>
-                        <p className='fs-5 fw-semibold'>SocialChef is the ultimate cooking social community, where recipes come to life. By joining us you will join a robust foodie community and where you will get to share your recipes and food ideas with hundreds of other like-minded members.</p>
-                        <p className='fs-5 fw-semibold'>You will also get a chance to win awesome prizes, make new friends and share delicious recipes.</p>
+                <Card.Img variant="top" src="https://img.freepik.com/free-photo/burger_1339-1577.jpg?w=740&t=st=1683040823~exp=1683041423~hmac=05dcff08edf15edd6d192aeec6f93f516f4d17d3a71cec72a8aa6a06f17bd2a9" />
+                <Card.ImgOverlay className='ms-4 d-flex text-black' style={{marginTop:'200px'}}>
+                       <div className='w-50'>
+                           <h2 className='fs-1 fw-bold'>Welcome to American Chef's Recipes!</h2>
+                            <p className='fs-5 fw-semibold'>
+                             Welcome to American Chef's Recipes , your go-to source for all things delicious and American cuisine! Our team of food experts is led by the talented and experienced Chef , they has dedicated there career to showcasing the best of American culinary traditions</p>
+                            <p className='fs-5 fw-semibold'>You will also get a chance to win awesome chef , make new friends and share delicious recipes.</p>
+                       </div>
                 </Card.ImgOverlay>
             </Card>
+            
+             <div style={{marginTop:'150px' , marginBottom: '50px' , textAlign: 'center'}}>
+                 <h2 className='fw-bold'>Explore Our awesome Chefs and Their Recipes!</h2>
+             </div>
+
+
             <div className='my-4' style={{display:'grid' , gridTemplateColumns :'1fr 1fr 1fr' , gap: '20px'}}>
                {
                 data.map(sd => <Cart key={sd.id} chef = {sd}></Cart>)
