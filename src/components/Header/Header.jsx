@@ -15,7 +15,6 @@ const Header = () => {
         console.log(error.message);
       })
   }
-  // console.log(user?.displayName);
 
   return (
     <Navbar className="mx-2" collapseOnSelect expand="lg" bg="secondary" variant="dark">
@@ -29,7 +28,7 @@ const Header = () => {
               { user ? <Link className="inActiveLink" onClick={handleLogOut}>Log Out</Link> :
               <Link className={location.pathname == '/login' ? "activeLink" : 'inActiveLink' } to='/login'>Login</Link>}
                {
-                user && <img className="userPic" style={{width:'40px' , height : '40px' , borderRadius :'50%'}} src={user.photoURL}></img>
+                user && <img title={user?.displayName} className="userPic" style={{width:'40px' , height : '40px' , borderRadius :'50%'}} src={user.photoURL}></img>
                }
               {/* <Link className="me-4 text-decoration-none text-white" to='/register'>Register</Link> */}
           </Nav>
