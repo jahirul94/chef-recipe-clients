@@ -19,18 +19,20 @@ const RecipesDetails = () => {
     return (
         <Container>
              <div className='mt-4 me-2'>
-                 <Card style={{ width: '500px' }}>
-                    <Card.Img variant="top" src={picture} />
-                    <Card.Body>
-                    <Card.Title className="fs-4 fw-bold my-2">{name}</Card.Title>
-                    <div className='my-2'><small>{bio_data}</small></div>
-                     <div><span className="fw-semibold m-0">Years of experience : </span>{experience}</div>
-                     <div><span className="fw-semibold m-0">Numbers of recipes : </span>{recipes}</div>
-                     <div><span className="fw-semibold m-0"><FaHeart></FaHeart> Likes : </span>{likes}</div>
-                    </Card.Body>
+                 <Card style={{ width: '100%',backgroundColor:'#E1E8ED'}}>
+                      <div className='d-flex justify-content-between'>
+                        <div className='w-50'><img style={{width:'95%'}} src={picture} /></div>
+                        <div className='w-50 pt-2'>
+                                <h2 className="fs-4 fw-bold my-2">{name}</h2>
+                                <div className='my-2'><small>{bio_data}</small></div>
+                                <div><span className="fw-semibold m-0">Years of experience : </span>{experience}</div>
+                                <div><span className="fw-semibold m-0">Numbers of recipes : </span>{recipes}</div>
+                                <div><span className="fw-semibold m-0"><FaHeart></FaHeart> Likes : </span>{likes}</div>
+                        </div>
+                      </div>
                 </Card>
              </div>
-              <Card style={{marginTop:'50px' , padding :'20px 0px'}} className='text-center mb-2'>
+              <Card style={{marginTop:'50px' , padding :'20px 0px' ,  backgroundColor:'#E1E8ED'}} className='text-center mb-2'>
                    <h2 className='fw-bold'>Explore My Recipe</h2>
                     <p className='fw-semibold'>Choosing The Good Food Is The best Investment in You . Explore My <br /> Recipe and Test that I belive that's can change You're Mood</p>
               </Card>

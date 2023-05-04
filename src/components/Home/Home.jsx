@@ -12,20 +12,19 @@ const Home = () => {
         <Container>
             <Card style={{marginBottom :'50px' , marginTop : '20px'}}>
             <LazyLoad>
-                <Card.Img variant="top" src="https://img.freepik.com/free-photo/burger_1339-1577.jpg?w=740&t=st=1683040823~exp=1683041423~hmac=05dcff08edf15edd6d192aeec6f93f516f4d17d3a71cec72a8aa6a06f17bd2a9" />
+                <Card.Img variant="top" src="https://img.freepik.com/premium-photo/homemade-hamburger-close-up-with-beef-tomato-lettuce-cheese-onion-wooden-table_96727-1158.jpg?w=900" />
             </LazyLoad>
-                <Card.ImgOverlay className='ms-4 d-flex text-black'>
+                <Card.ImgOverlay className='ms-4 d-flex'>
                        <div className='w-50'>
                            <h2 className='text-large'>Welcome to American Chef's Recipes!</h2>
                             <p className='text-small'>
-                             Welcome to American Chef's Recipes , your go-to source for all things delicious and American cuisine! Our team of food experts is led by the talented and experienced Chef , they has dedicated there career to showcasing the best of American culinary traditions</p>
-                            <p className='text-small'>You will also get a chance to win awesome chef , make new friends and share delicious recipes.</p>
+                             Welcome to American Chef's Recipes , your go-to source for all things delicious and American cuisine! Our team of food experts is led by the talented and experienced Chef , they has dedicated there career to showcasing the best of American culinary traditions.</p>
                        </div>
                 </Card.ImgOverlay>
-            </Card>
+            </Card> 
             
              <section>
-                 <Card style={{ paddingTop:'50px' ,paddingBottom: '50px' , textAlign: 'center'}}>
+                 <Card style={{ backgroundColor:'#E1E8ED' , paddingTop:'50px' ,paddingBottom: '50px' , textAlign: 'center'}}>
                     <Card.Body>
                         <Card.Title className='fw-bold fs-2 mb-4'>Explore Our awesome Chefs and Their Recipes!</Card.Title>
                         <Card.Text className='fw-semibold'>
@@ -38,16 +37,16 @@ const Home = () => {
 
             <div className='my-4 grid'>
                {
-                data.map(sd => <Cart key={sd.id} chef = {sd}></Cart>)
+                data?.map(sd => <Cart key={sd.id} chef = {sd}></Cart>)
                }
             </div>
-             <Card className='my-4'>
+             <Card style={{ backgroundColor:'#E1E8ED'}} className='my-4'>
                   <div className='text-center pt-4'>
-                      <h3>Our Services </h3>
+                      <h3 className='fs-1 fw-bold'>Our Services </h3>
                   </div>
                    <div className='ourServiceResponsive d-flex justify-content-around mb-2'>
                         <Card className='m-2'>
-                            <Card.Body>
+                            <Card.Body style={{ backgroundColor:'#E1E8ED'}}>
                                 <Card.Title className='fw-bold'>Recipe sharing</Card.Title>
                                 <Card.Text className='fw-semibold ps-2'>
                                   We can offer a platform for chefs to share their favorite recipes with the world. These recipes can be categorized based on cuisine, ingredients, dietary requirements, and other factors.
@@ -55,7 +54,7 @@ const Home = () => {
                             </Card.Body>
                         </Card>
                         <Card className='m-2'>
-                            <Card.Body>
+                            <Card.Body style={{ backgroundColor:'#E1E8ED'}}>
                                 <Card.Title className='fw-bold'>Cooking tips and techniques</Card.Title>
                                 <Card.Text className='fw-semibold ps-2'>
                                     We can offer helpful tips and techniques for cooking, such as how to properly cooked, how to season meat, how to cook the perfect steak, and more.
@@ -63,7 +62,7 @@ const Home = () => {
                             </Card.Body>
                         </Card>
                         <Card className='m-2'>
-                            <Card.Body>
+                            <Card.Body style={{ backgroundColor:'#E1E8ED'}}>
                                 <Card.Title className='fw-bold'>Personal chef services</Card.Title>
                                 <Card.Text className='fw-semibold ps-2'>
                                     Our website can offer personal chef services where a chef can cook for clients in their home or prepare meals for them to take away.

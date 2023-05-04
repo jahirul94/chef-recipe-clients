@@ -5,6 +5,7 @@ import { FaStar } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import LazyLoad from "react-lazy-load";
+import { Card } from "react-bootstrap";
 
 
 const RecipesDetailsCard = ({ data }) => {
@@ -15,9 +16,8 @@ const RecipesDetailsCard = ({ data }) => {
      toast("You're Recipe added On Favorite Items!")
      setFavorite(!Favorite)
   }
-
   return (
-      <div className="p-2" style={{border : '1px solid gray' , height:'100%'}}>
+      <Card className="p-4" style={{border : '1px solid gray' , height:'100%' ,  backgroundColor:'#E1E8ED'}}>
          <LazyLoad>
               <img style={{height : '300px' , width : '100%'}} className="img-fluid mb-2" src={picture} alt="" />
          </LazyLoad>
@@ -39,13 +39,13 @@ const RecipesDetailsCard = ({ data }) => {
                                 </div>
                             </div>
                             <div className="pt-2">
-                               <button type="button" className="btn btn-outline-secondary d-flex align-items-center" onClick={handleTost} disabled={Favorite}>Add to Favorite<FaStar className="ms-2 text-warning"></FaStar></button>
+                               <button type="button" className="btn btn-outline-primary d-flex align-items-center" onClick={handleTost} disabled={Favorite}>Add to Favorite<FaStar className="ms-2 text-warning"></FaStar></button>
                                <ToastContainer />
                             </div>
                         </div>
                   </div>
              </div>
-      </div>
+      </Card>
   );
 };
 
