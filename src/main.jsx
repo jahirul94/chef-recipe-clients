@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       {
         path :'/',
         element : <Home></Home>,
-        loader : ()=> fetch('http://localhost:5000/data')
+        loader : ()=> fetch('https://assignment-ten-server-seven.vercel.app/data')
       },
       { 
         path : '/login',
@@ -36,22 +36,20 @@ const router = createBrowserRouter([
         element : <Register></Register>
       },
       {
-        path : ':id',
+        path : '/:id',
         element : <PrivateRoutes><RecipesDetails></RecipesDetails></PrivateRoutes>,
-        loader : ({params}) => fetch(`http://localhost:5000/${params.id}`)
+        loader : ({params}) => fetch(`https://assignment-ten-server-seven.vercel.app/${params.id}`)
       },
        {
         path :'blog',
         element :<Blog></Blog>
-
        },
-      {
-        path :'*',
-        element :<ErrorPage></ErrorPage>
-      }
-    
+        {
+          path:'*',
+          element : <ErrorPage></ErrorPage>
+        }
     ]
-  }
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

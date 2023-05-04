@@ -57,12 +57,12 @@ const Register = () => {
      <Form onSubmit={handleRegister}>
          <Form.Group className="mb-3" controlId="formBasicName">
          <Form.Label className='fw-bold'>You're Name</Form.Label>
-         <Form.Control type="text" name="name" placeholder="Put You're name"  required />
+         <Form.Control type="text" name="name" placeholder="You're name"  required />
          </Form.Group>
 
          <Form.Group className="mb-3" controlId="formBasicPhoto">
          <Form.Label className='fw-bold'>Photo Url</Form.Label>
-         <Form.Control type="text" name="photo" placeholder="Put You're Photo Url"  required />
+         <Form.Control type="text" name="photo" placeholder="You're Photo Url"  required />
          </Form.Group>
 
          <Form.Group className="mb-3" controlId="formBasicEmail">

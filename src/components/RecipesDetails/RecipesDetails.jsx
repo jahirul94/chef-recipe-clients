@@ -8,11 +8,11 @@ import { FaHeart } from 'react-icons/fa';
 const RecipesDetails = () => {
     const [ userDetails , setUserDetails ] = useState({});
     const {name , picture , experience , likes , recipes , bio_data } = userDetails ;
-    console.log(userDetails);
+    // console.log(userDetails);
     const detailsData = useLoaderData();
     const {id} = useParams();
     useEffect(()=>{
-         fetch(`http://localhost:5000/user/${id}`)
+         fetch(`https://assignment-ten-server-seven.vercel.app/user/${id}`)
          .then(res=>res.json())
          .then(data => setUserDetails(data))
     },[])
@@ -30,10 +30,10 @@ const RecipesDetails = () => {
                     </Card.Body>
                 </Card>
              </div>
-              <div style={{marginTop:'50px'}} className='text-center mb-2'>
+              <Card style={{marginTop:'50px' , padding :'20px 0px'}} className='text-center mb-2'>
                    <h2 className='fw-bold'>Explore My Recipe</h2>
                     <p className='fw-semibold'>Choosing The Good Food Is The best Investment in You . Explore My <br /> Recipe and Test that I belive that's can change You're Mood</p>
-              </div>
+              </Card>
              <div className='my-4 grid'>
                 {
                    detailsData.map( sd => <RecipesDetailsCard key={sd.id} data = {sd}></RecipesDetailsCard>)

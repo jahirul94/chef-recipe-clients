@@ -22,7 +22,7 @@ const Login = () => {
     setError('');
     login( email , password )
     .then(result =>{
-      console.log(result.user);
+       const loggedUser = result.user ;
       navigate(from , { replace : true });
       form.reset();
     })
@@ -34,7 +34,7 @@ const Login = () => {
   const handleLoginWithGoogle = () =>{
       loginWithGoogle()
       .then(result =>{
-        console.log(result.user);
+          const loggedUser = result.user
         navigate(from , { replace : true });
       })
       .catch(err =>{
@@ -46,7 +46,7 @@ const Login = () => {
   const handleLoginWithGithub = () =>{
       loginWithGithub()
       .then(result =>{
-        console.log(result.user);
+        const loggedUser = result.user;
         navigate(from , { replace : true });
       })
       .catch(err =>{

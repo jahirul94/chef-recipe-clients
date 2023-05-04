@@ -17,9 +17,9 @@ const Header = () => {
   }
 
   return (
-    <Navbar className="mx-2" collapseOnSelect expand="lg" bg="secondary" variant="dark">
+    <Navbar style={{backgroundColor:'#212A3E'}} collapseOnSelect expand="lg" variant="dark">
       <Container>
-        <Navbar.Brand>American Chef's Recipes </Navbar.Brand>
+        <Navbar.Brand className="fs-3 fw-bolder">American Chef's Recipes </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto mt-2">

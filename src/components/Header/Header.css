@@ -29,6 +29,7 @@
     font-size: 17px;  
 }
 
+
 @media only screen and (max-width: 768px) {
        .grid{
          display: flex;
@@ -44,6 +45,10 @@
         font-weight: 600;
         font-size: 12px;
     }
+    .ourServiceResponsive{
+        display: flex;
+        flex-direction: column;
+    }
       
 }
 
@@ -55,3 +60,4 @@
   .is-visible {
     opacity: 1;
   }
+

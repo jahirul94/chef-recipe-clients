@@ -24,8 +24,8 @@ const Home = () => {
                 </Card.ImgOverlay>
             </Card>
             
-             <section >
-                 <Card style={{paddingTop:'50px' ,paddingBottom: '50px' , textAlign: 'center'}}>
+             <section>
+                 <Card style={{ paddingTop:'50px' ,paddingBottom: '50px' , textAlign: 'center'}}>
                     <Card.Body>
                         <Card.Title className='fw-bold fs-2 mb-4'>Explore Our awesome Chefs and Their Recipes!</Card.Title>
                         <Card.Text className='fw-semibold'>
@@ -41,6 +41,37 @@ const Home = () => {
                 data.map(sd => <Cart key={sd.id} chef = {sd}></Cart>)
                }
             </div>
+             <Card className='my-4'>
+                  <div className='text-center pt-4'>
+                      <h3>Our Services </h3>
+                  </div>
+                   <div className='ourServiceResponsive d-flex justify-content-around mb-2'>
+                        <Card className='m-2'>
+                            <Card.Body>
+                                <Card.Title className='fw-bold'>Recipe sharing</Card.Title>
+                                <Card.Text className='fw-semibold ps-2'>
+                                  We can offer a platform for chefs to share their favorite recipes with the world. These recipes can be categorized based on cuisine, ingredients, dietary requirements, and other factors.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                        <Card className='m-2'>
+                            <Card.Body>
+                                <Card.Title className='fw-bold'>Cooking tips and techniques</Card.Title>
+                                <Card.Text className='fw-semibold ps-2'>
+                                    We can offer helpful tips and techniques for cooking, such as how to properly cooked, how to season meat, how to cook the perfect steak, and more.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                        <Card className='m-2'>
+                            <Card.Body>
+                                <Card.Title className='fw-bold'>Personal chef services</Card.Title>
+                                <Card.Text className='fw-semibold ps-2'>
+                                    Our website can offer personal chef services where a chef can cook for clients in their home or prepare meals for them to take away.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                   </div>
+             </Card>
         </Container>
     );
 };
