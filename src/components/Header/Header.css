@@ -1,66 +1,81 @@
-.activeLink{
-     margin-right: 30px;
-     text-decoration: underline;
-     color:white;
-}
- 
-.inActiveLink{
-    margin-right: 30px;
-    text-decoration: none;
-    color:white;
-
+/* header component css */
+.activeLink {
+  margin-right: 30px;
+  text-decoration: underline;
+  color: white;
 }
 
-.grid{
-    display: grid;
-    grid-template-columns:repeat(3 , 1fr);
-    gap: 20px;
+.inActiveLink {
+  margin-right: 30px;
+  text-decoration: none;
+  color: white;
 }
 
-.text-large{
-    font-weight: 700;
-    font-size: 40px;
-    margin-bottom: 30px;
-    padding-top: 150px;
-    color: white;
+/* home to cart component css */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-.text-small{
-    font-weight: 400;
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.808);  
+/* home banner */
+.text-large {
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 30px;
+  padding-top: 150px;
+  color: white;
 }
 
+.text-small {
+  font-weight: 400;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.808);
+}
+.main-card {
+  width: 50%;
+  margin-left: 30px;
+}
 
 @media only screen and (max-width: 768px) {
-       .grid{
-         display: flex;
-         flex-direction: column;
-       }
-       .text-large{
-        font-weight: 700;
-        font-size: 20px;
-        margin-bottom: 2px;
-        padding-top: 5px;
-    }
-    .text-small{
-        font-weight: 600;
-        font-size: 12px;
-        margin-bottom: 2px;
-    }
-    .ourServiceResponsive{
-        display: flex;
-        flex-direction: column;
-    }
-      
+   /* home to cart css  */
+    .grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* home page banner css  */
+  .main-card {
+    width: 70%;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+  .text-large {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 2px;
+    padding-top: 5px;
+  }
+  .text-small {
+    font-weight: 600;
+    font-size: 11px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+  }
+
+  /* home page our service section  */
+  .ourServiceResponsive {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
+/* lazy load component css  */
 .LazyLoad {
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-  }
-  
-  .is-visible {
-    opacity: 1;
-  }
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
 
+.is-visible {
+  opacity: 1;
+}

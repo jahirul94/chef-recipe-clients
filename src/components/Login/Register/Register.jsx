@@ -3,6 +3,8 @@ import { Button, Container, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Register = () => {
@@ -34,6 +36,7 @@ const Register = () => {
              const user = result.user ;
              form.reset();
              updateData(user , name , photo)
+             toast("User Created Successfully!");
         })
         .catch(error =>{
            setError(error.message);
@@ -88,6 +91,7 @@ const Register = () => {
      <div style={{marginBottom:'100px'}} className="mt-2">
          Already Have An Account ? <Link to='/login' className="text-primary text-decoration-none"> Login </Link>
      </div>
+     <ToastContainer/>
 </Container> 
   );
 };

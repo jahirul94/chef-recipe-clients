@@ -14,8 +14,8 @@ const Home = () => {
             <LazyLoad>
                 <Card.Img variant="top" src="https://img.freepik.com/premium-photo/homemade-hamburger-close-up-with-beef-tomato-lettuce-cheese-onion-wooden-table_96727-1158.jpg?w=900" />
             </LazyLoad>
-                <Card.ImgOverlay className='ms-4 d-flex'>
-                       <div className='w-50'>
+                <Card.ImgOverlay>
+                       <div className='main-card'>
                            <h2 className='text-large'>Welcome to American Chef's Recipes!</h2>
                             <p className='text-small'>
                              Welcome to American Chef's Recipes , your go-to source for all things delicious and American cuisine! Our team of food experts is led by the talented and experienced Chef , they has dedicated there career to showcasing the best of American culinary traditions.</p>
