@@ -19,7 +19,7 @@ const RecipesDetails = () => {
     return (
         <Container>
              <div className='mt-4 me-2'>
-                 <Card style={{ width: '100%',backgroundColor:'#E1E8ED'}}>
+                 <Card style={{ width: '100%',backgroundColor:'#595D95' , color : "white"}}>
                       <div className='d-flex justify-content-between'>
                         <div className='w-50'><img style={{width:'95%'}} src={picture} /></div>
                         <div className='w-50 pt-2'>
@@ -32,7 +32,7 @@ const RecipesDetails = () => {
                       </div>
                 </Card>
              </div>
-              <Card style={{marginTop:'50px' , padding :'20px 0px' ,  backgroundColor:'#E1E8ED'}} className='text-center mb-2'>
+              <Card style={{marginTop:'50px' , padding :'20px 0px' , backgroundColor:'#595D95' , color : "white"}} className='text-center mb-2'>
                    <h2 className='fw-bold'>Explore My Recipe</h2>
                     <p className='fw-semibold'>Choosing The Good Food Is The best Investment in You . Explore My <br /> Recipe and Test that I belive that's can change You're Mood</p>
               </Card>

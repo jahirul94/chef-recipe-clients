@@ -17,7 +17,7 @@ const Header = () => {
   }
 
   return (
-    <Navbar style={{backgroundColor:'#212A3E'}} collapseOnSelect expand="lg" variant="dark">
+    <Navbar style={{backgroundColor:'#595D95'}} collapseOnSelect expand="lg" variant="dark">
       <Container>
         <Navbar.Brand className="fs-3 fw-bolder">American Chef's Recipes </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

@@ -7,7 +7,7 @@ import LazyLoad from "react-lazy-load";
 
 const Cart = ({ chef }) => {
   return (
-    <Card style={{ backgroundColor:'#E1E8ED'}}>
+    <Card style={{ backgroundColor:'#595D95' , color : "white"}}>
           <LazyLoad>
                  <Card.Img style={{height:'400px'}} className="p-2" variant="top" src={chef.picture} />
           </LazyLoad>

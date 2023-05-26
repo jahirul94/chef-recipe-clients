@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 
 const Main = () => {
     return (
-        <div style={{backgroundColor:'#DBDFEA'}}>
+        <div style={{backgroundColor:'#ACBCFF'}}>
             <Header></Header>
                  <Outlet></Outlet>
             <Footer></Footer>

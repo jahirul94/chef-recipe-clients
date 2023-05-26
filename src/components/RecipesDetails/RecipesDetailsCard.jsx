@@ -17,7 +17,7 @@ const RecipesDetailsCard = ({ data }) => {
      setFavorite(!Favorite)
   }
   return (
-      <Card className="p-4" style={{border : '1px solid gray' , height:'100%' ,  backgroundColor:'#E1E8ED'}}>
+      <Card className="p-4" style={{border : '1px solid gray' , height:'100%' , backgroundColor:'#595D95' , color : "white"}}>
          <LazyLoad>
               <img style={{height : '300px' , width : '100%'}} className="img-fluid mb-2" src={picture} alt="" />
          </LazyLoad>
@@ -39,7 +39,7 @@ const RecipesDetailsCard = ({ data }) => {
                                 </div>
                             </div>
                             <div className="pt-2">
-                               <button type="button" className="btn btn-outline-primary d-flex align-items-center" onClick={handleTost} disabled={Favorite}>Add to Favorite<FaStar className="ms-2 text-warning"></FaStar></button>
+                               <button type="button" className="btn btn-outline-warning d-flex align-items-center" onClick={handleTost} disabled={Favorite}>Add to Favorite<FaStar className="ms-2 text-warning"></FaStar></button>
                                <ToastContainer />
                             </div>
                         </div>
